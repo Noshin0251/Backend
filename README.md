@@ -1,6 +1,2 @@
 # Backend
-WEBサーバ
-ghggg
-
-
-ss
+WEBサーバ陣のリポジトリ。
