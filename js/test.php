@@ -8,9 +8,9 @@
 <canvas id="myChart"></canvas>
 
 
-<script type="text/javascript" src="../js/moment.js"></script>
-<script type="text/javascript" src="../js/Chart.js"></script>
-<script type="text/javascript" src="../js/chartjs-plugin-streaming.js"></script>
+<script type="text/javascript" src="moment.js"></script>
+<script type="text/javascript" src="Chart.js"></script>
+<script type="text/javascript" src="chartjs-plugin-streaming.js"></script>
 <script>
 
 var ctx = document.getElementById('myChart').getContext('2d');
