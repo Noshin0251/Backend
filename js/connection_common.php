@@ -38,7 +38,7 @@ function json_safe_encode($data){
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 //外部javascript呼び出し
 //ここでid属性を記述して、スクリプトタグに変数を埋め込みます
-<script id="script" type="text/javascript" src="./js/script.js"
+<script id="script" type="text/javascript" src="test.php"
  data-param='<?php echo json_safe_encode($param);?>'>
 </script>
 
