@@ -16,6 +16,7 @@ function getDb() {
 
       } catch (PDOException $e) {
     exit('DbConnectError:'.$e->getMessage());
+    print "エラー!: " . $e->getMessage() . "<br/>";
   }
   return $pdo;
 }
