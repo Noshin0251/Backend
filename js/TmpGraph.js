@@ -17,7 +17,7 @@ var chart = new Chart(ctx, {
             responsive: true,
             maintainAspectRatio: false,
             streaming: {            
-                duration: 50000,    
+                duration: 5000,    
                 refresh: 10000,      
                 delay: 1000,        
                 frameRate: 30,      
