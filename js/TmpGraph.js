@@ -1,29 +1,35 @@
 var ctx = document.getElementById('myChart').getContext('2d');
-
 var chart = new Chart(ctx, {
     type: 'line',               
     data: {
         datasets: [{
-            data: []            
+            data: [],            
+            label: 'Unknowグラフ',
         }]
     },
     options: {
         scales: {
             xAxes: [{
-                type: 'realtime'    
-            }]
+                type: 'realtime', 
+            }],
+            yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+            min: 0,
+            max: 100
+          }
+        }
+      ]
         },
         plugins: {
-            responsive: true,
-            maintainAspectRatio: false,
             streaming: {            
-                duration: 5000,    
-                refresh: 10000,      
+                duration: 20000,    
+                refresh: 1000,      
                 delay: 1000,        
                 frameRate: 30,      
                 pause: false,       
 
-                
                 onRefresh: function(chart) {
                     chart.data.datasets[0].data.push({
                         x: Date.now(),
@@ -34,17 +40,17 @@ var chart = new Chart(ctx, {
         }
     }
 });
-
+//初期値0
 let a = 0;
 function get_data(){
+    //sample.phpの数字を取りに行く
     $.ajax({
-        url: "../GETDB.php",
+        url: "GETDB.php",
         method: "POST",
     })
     .done(function(data){
         a = data;
-        console.log(data);
-        $('#len').html(data);
     });
+    //数字を返す
     return a;
 }
