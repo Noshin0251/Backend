@@ -3,7 +3,7 @@ connection_common.php
 require_once 'DbManager.php';
 $pdo = getDb();
 
-foreach ( $pdo->query ( 'select * from product' ) as $row2 ) {
+foreach ( $pdo->query ( 'select * from ondokei' ) as $row2 ) {
     echo '<p>';
     echo $row2 ['id'], ':';
     echo $row2 ['ondo'], ':';
