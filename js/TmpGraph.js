@@ -23,13 +23,13 @@ var chart = new Chart(ctx, {
                 frameRate: 30,      
                 pause: false,       
 
-                /*
+                
                 onRefresh: function(chart) {
                     chart.data.datasets[0].data.push({
                         x: Date.now(),
                         y: Math.random() * 100
                     });
-                }*/
+                }
             }
         }
     }
@@ -38,7 +38,7 @@ var chart = new Chart(ctx, {
 let a = 0;
 function get_data(){
     $.ajax({
-        url: "../DBGet.php",
+        url: "../php/DBGet.php",
         method: "POST",
     })
     .done(function(data){
