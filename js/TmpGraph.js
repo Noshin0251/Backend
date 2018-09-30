@@ -33,7 +33,7 @@ var chart = new Chart(ctx, {
                 onRefresh: function(chart) {
                     chart.data.datasets[0].data.push({
                         x: Date.now(),
-                        y: get_data()
+                        y: 5
                     });
                 }
             }
