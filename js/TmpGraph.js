@@ -17,19 +17,19 @@ var chart = new Chart(ctx, {
             responsive: true,
             maintainAspectRatio: false,
             streaming: {            
-                duration: 200000,    
+                duration: 50000,    
                 refresh: 10000,      
                 delay: 1000,        
                 frameRate: 30,      
                 pause: false,       
 
-                /*
+                
                 onRefresh: function(chart) {
                     chart.data.datasets[0].data.push({
                         x: Date.now(),
-                        y: Math.random() * 100
+                        y: get_data()
                     });
-                }*/
+                }
             }
         }
     }
@@ -38,7 +38,7 @@ var chart = new Chart(ctx, {
 let a = 0;
 function get_data(){
     $.ajax({
-        url: "../DBGet.php",
+        url: "../GETDB.php",
         method: "POST",
     })
     .done(function(data){
