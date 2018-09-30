@@ -23,13 +23,13 @@ var chart = new Chart(ctx, {
                 frameRate: 30,      
                 pause: false,       
 
-                
+                /*
                 onRefresh: function(chart) {
                     chart.data.datasets[0].data.push({
                         x: Date.now(),
                         y: Math.random() * 100
                     });
-                }
+                }*/
             }
         }
     }
