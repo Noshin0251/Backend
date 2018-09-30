@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <!-- nternetExplorerのブラウザではバージョンによって崩れることがあるので、
+    互換表示をさせないために設定するmetaタグ -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- レスポンシブWebデザインを使うために必要なmetaタグ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://192.168.11.15/ababa.html" />
+    <title>Bootstrap Sample</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- BootstrapのJavaScriptよりも、jQueryを先に読み込む
+    そうしなければ、BootstrapのJavaScriptを使う動きが動作しない  -->
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- chart.jsのJS読み込み -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script type="text/javascript" src="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v1.2.0/chartjs-plugin-streaming.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.1.0/pusher.js"></script>
+
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+                <div class="p-3">
+                <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                          <a href="#tab1" class="nav-link navbar-default active" data-toggle="tab">Tab1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#tab2" class="nav-link navbar-default" data-toggle="tab">Tab2</a>
+                        </li>
+                      </ul>
+                      </div>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>名前</th>
+              <th>メールアドレス</th>
+              <th>電話番号</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+                <td>煌木 太郎</td>
+                <td>taro.kirameki@example.com</td>
+                <td>09011112222</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+                <td>煌木 次郎</td>
+                <td>jiro.kirameki@example.com</td>
+                <td>09033334444</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+                <td>煌木 花子</td>
+                <td>hanako.kirameki@example.com</td>
+                <td>09055556666</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+
+
+
+      <!--タブの中身-->
+      <div class="tab-content">
+        <div id="tab1" class="tab-pane active p-3">
+            
+          <!--Tab1の内容-->
+          <p>
+                   <!-- chartJSでグラフを書く -->
+       <div class="container">
+          <div class="table-responsive p-3">
+          <canvas id="canvas"></canvas>
+          <script type="text/javascript" src="js/chartJS_graph.js"></script>
+        </div>
+      </div>
+
+          <button type="button" class="btn btn-default">Default</button>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-link">Link</button>
+          </p>
+        </div>
+        <div id="tab2" class="tab-pane p-3">
+         <!--Tab２の内容-->
+          
+     
+
+         <p>
+            <div class="table-responsive p-3">
+            <canvas id="myChart"></canvas>
+            <script type="text/javascript" src="js/TmpGraph.js"></script>
+            </div>
+                <button type="button" class="btn btn-primary">Default button</button>
+                <button type="button" class="btn btn-default">Default button</button>
+          </p><p>
+                <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+            </p>
+        </div>
+      </div>
+    </div>
+      
+      
+</body>
+</html>
