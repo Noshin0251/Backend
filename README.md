@@ -1,3 +1,3 @@
 # Backend
 WEBサーバ陣のリポジトリ。
-![](https://imgur.com/a/NHRVpFt)
+https://github.com/Noshin0251/Backend/issues/1
