@@ -15,7 +15,7 @@ function db_con(){
 
 
 
-$stmt = $pdo->prepare("SELECT ondo from ondokei where id = 5"); //現在時刻のデータのみ取得
+$stmt = $pdo->prepare("SELECT ondo from ondokei where id > (5 + interval -5 SECOND)"); //現在時刻のデータのみ取得
 $stmt->execute();
 $res = $stmt->fetchAll();
 
