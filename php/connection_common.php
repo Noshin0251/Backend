@@ -11,6 +11,8 @@ foreach ( $pdo->query ( 'select * from ondokei' ) as $row2 ) {
     echo '</p>';
 }
 
+/*
+
 // INSERT文を変数に格納
 $sql = "INSERT INTO ondokei (ondo,shitudo,level,comment) VALUES (:ondo, :shitudo, :level, :comment)";
 // 挿入する値は空のまま、SQL実行の準備をする
@@ -22,4 +24,5 @@ $stmt->execute($params);
 // 登録完了のメッセージ
 echo '登録完了しました';
 
+*/
 ?>

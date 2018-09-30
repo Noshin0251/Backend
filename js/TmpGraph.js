@@ -34,17 +34,28 @@ var chart = new Chart(ctx, {
         }
     }
 });
-
 let a = 0;
-function get_data(){
+function client(){
     $.ajax({
-        url: "../php/DBGet.php",
-        method: "POST",
+        url: '../php/DB_GET_TO_ajax.phpp',   //サーバ側のphp
+        type: 'GET',           //GETかPOSTか
+        data: {                //呼び出し先のパラメータ
+            parameter1: 'GETパラメータの値',
+            parameter2: 'GETパラメータの値',
+        },
+       dataType: 'json'        //サーバ側からの返却形式、XMLとかも可能
     })
-    .done(function(data){
+    .done(function(data) {
+        //成功した場合に行う処理
         a = data;
         console.log(data);
         $('#len').html(data);
+    })
+    .fail(function(data) {
+        //失敗した場合に行う処理
+    })
+    .always(function(data) {
+        //常に行う処理
     });
     return a;
-}
+};
