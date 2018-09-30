@@ -42,6 +42,9 @@ var chart = new Chart(ctx, {
         datasets: [{
             data: [],            
             label: 'Unknowグラフ',
+            fillColor: 'rgba(255,211,225,0.5)',//塗りつぶす色
+            strokeColor: 'rgba(225,211,225,0.5)',//線の色0
+            backgroundColor : 'rgba(255,211,225,0.5)',//塗りつぶす色
         }]
     },
     options: {

@@ -4,7 +4,16 @@ var chart = new Chart(ctx, {
     data: {
         datasets: [{
             data: [],            
-            label: 'Unknowグラフ',
+            label: '温度',
+            fillColor: 'rgba(255,211,225,0.5)',//塗りつぶす色
+            strokeColor: 'rgba(225,211,225,0.5)',//線の色0
+            backgroundColor : 'rgba(255,211,225,0.5)',//塗りつぶす色
+        },{
+            data: [],            
+            label: '湿度',
+            fillColor: 'rgba(211,255,225,0.5)',//塗りつぶす色
+            strokeColor: 'rgba(211,225,225,0.5)',//線の色0
+            backgroundColor : 'rgba(211,255,225,0.5)',//塗りつぶす色
         }]
     },
     options: {
@@ -35,11 +44,22 @@ var chart = new Chart(ctx, {
                         x: Date.now(),
                         y: 5
                     });
+                    chart.data.datasets[1].data.push({
+                        x: Date.now(),
+                        y: 10
+                    });
                 }
             }
         }
+        
     }
+    
 });
+
+
+
+
+
 //初期値0
 let a = 0;
 function get_data(){
