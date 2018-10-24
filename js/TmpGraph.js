@@ -46,7 +46,7 @@ var chart = new Chart(ctx, {
                     });
                     chart.data.datasets[1].data.push({
                         x: Date.now(),
-                        y: get_data()
+                        y: 0
                     });
                 }
             }
