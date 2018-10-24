@@ -67,7 +67,7 @@ function get_data(){
         url: "GETDB.php",
         method: "POST",
     })
-    .done(function(data){
+    .done(function GET_value(data){
         a = data;
     });
     //数字を返す
