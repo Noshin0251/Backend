@@ -15,4 +15,5 @@ $res = $stmt->fetchAll();
 
 
 echo count ($res);
-}
+
+?>

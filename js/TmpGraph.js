@@ -42,11 +42,11 @@ var chart = new Chart(ctx, {
                 onRefresh: function(chart) {
                     chart.data.datasets[0].data.push({
                         x: Date.now(),
-                        y: 5
+                        y: get_data()
                     });
                     chart.data.datasets[1].data.push({
                         x: Date.now(),
-                        y: 10
+                        y: get_data()
                     });
                 }
             }
@@ -55,7 +55,6 @@ var chart = new Chart(ctx, {
     }
     
 });
-
 
 
 
@@ -74,3 +73,4 @@ function get_data(){
     //数字を返す
     return a;
 }
+
